@@ -7,7 +7,7 @@ $(function () {
     
     
     var postsCollection = Backendless.Persistence.of(Posts).find();
-    
+
     console.log(postsCollection);
     
     var wrapper = {
