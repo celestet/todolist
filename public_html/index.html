@@ -27,7 +27,7 @@
         </header>
         <main>
             <textarea name="add-new-task"></textarea>
-            <label>Add new task</label>
+            <button class="btn btn-large waves-effect waves-light add-new-task">Add new task</button>
         </main>
         <footer class="page-footer" style=" background-color: #3f51b5 ">
             <div class="container">
@@ -45,11 +45,11 @@
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript" src="js/handlebars-v4.0.5.js"></script>
       
-      <script id="todo-template" type="text/x-handlebars-template">
+      <script id="blogs-template" type="text/x-handlebars-template">
           {{#each task}}
-            <div class="todo-task">
-                <h2 class="todo-task-title">{{title}}</h2>
-                <p class="todo-task-meta">At {{format created}}</p>
+            <div class="blog-post">
+                <h2 class="blog-post-title">{{title}}</h2>
+                <p class="blog-post-meta">At {{format created}}</p>
                 <div>{{content}}</div>
             </div>
           {{/each}}
