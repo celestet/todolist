@@ -5,13 +5,12 @@ $(function () {
 
     Backendless.initApp(APPLICATION_ID, SECRET_KEY, VERSION);
     
-    
-    var postsCollection = Backendless.Persistence.of(Posts).find();
+    var postsCollection; /*= Backendless.Persistence.of(Posts).find();*/
 
-    console.log(postsCollection);
+    /*console.log(postsCollection);*/
     
     var wrapper = {
-        posts: postsCollection.data
+       /*posts: postsCollection.data*/
     };
    
     Handlebars.registerHelper('format', function (time){
@@ -35,9 +34,6 @@ function Posts (args) {
 }
 
  $(document).on('submit', '.form-add-new-task', function(event){
-       if("empty"){
-        Materialize.toast('No title or content', 4000);   
-       }
        event.preventDefault();
        var data = $(this).serializeArray(),
            title = data[0].value,
