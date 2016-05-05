@@ -1,10 +1,28 @@
-nav{
-    background-color: black;
-}
-
+ nav{
+     background-color: black;
+ }
+ 
 a{
     font-family: 'Poiret One', cursive;
 }
+
+.task{
+    font-size: 40px;
+}
+
+#rcorners{
+    border-radius: 25px;
+    background: gray;
+    padding: 20px; 
+    width: 8px;
+    height: 4px; 
+    border-color: black;
+}
+
+#rcorners:hover{
+    background: orange;
+}
+
 
 
 

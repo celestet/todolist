@@ -26,16 +26,24 @@
         </nav>
         </header>
         <main>
-            <form class="col s12 form-add-new-task">
-              <div class="row">
-                  <div class="input-field col s12">
-                      <input id="task" type="text" name="task">
-                      <label for="task">Add new task</label>
-                  </div>
-             <button class="btn btn-large waves-effect waves-light" type="submit" name="action">Submit</button>
-              </div>
+            
+        <div class="row">
+            <form class="form-add-blog">
+                <div class="row">
+                <div class="input-field col s12">
+                      <input id="title" type="text" name="title">
+                      <label for="title">Title</label>
+                      <input id="dueDate" type="date" name="dueDate">
+                </div>
+                    <button type="submit" name="action">Submit</button>
+                </div>
             </form>
-            </main>
+        </div>
+
+            <div class="main-container">
+                <div class="row"></div>
+            </div>
+        </main>
         <footer class="page-footer" style=" background-color: black ">
             <div class="container">
                 <p><a href="#"></a></p>
@@ -53,15 +61,38 @@
       <script type="text/javascript" src="js/handlebars-v4.0.5.js"></script>
       
       <script id="blogs-template" type="text/x-handlebars-template">
-          {{#each task}}
+          {{#each posts}}
+            {{#if completed}}
             <div class="blog-post">
-                <h2 class="blog-post-title">{{title}}</h2>
+                <h2 id="rcorners" class="blog-post-title" label="{{objectId}}">{{title}}</h2>
                 <p class="blog-post-meta">At {{format created}}</p>
-                <div>{{content}}</div>
+        <div>{{dueDate}}</div>
+           
             </div>
+            {{else}}
+            <div class="blog-post">
+                <h2 id="rcorners" class="blog-post-title" label="{{objectId}}">{{title}}</h2>
+                <p class="blog-post-meta">At! {{format created}}</p>
+        <div>{{dueDate}}</div>
+
+            </div>
+            {{/if}}
+                      {{#if deleted}}
+            <div class="blog-post">
+                <h2 id="rcorners" class="blog-post-title" label="{{objectId}}">{{title}}</h2>
+                <p class="blog-post-meta">At {{format created}}</p>
+        <div>{{dueDate}}</div>
+            <button type="delete" name="action">Delete</button>
+            </div>
+            {{else}}
+            <div class="blog-post">
+                
+<button type="delete" name="action">Delete</button>
+            </div>
+            {{/if}}
           {{/each}}
+ 
       </script>
       
     </body>
   </html>
-

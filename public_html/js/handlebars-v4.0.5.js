@@ -515,7 +515,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  /* istanbul ignore else */
 	  if (Error.captureStackTrace) {
-	    Error.captureStackTrace(this,Exception);
+	    Error.captureStackTrace(this, Exception);
 	  }
 
 	  if (loc) {
